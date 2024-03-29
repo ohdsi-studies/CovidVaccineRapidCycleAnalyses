@@ -1,0 +1,1687 @@
+{
+  "1": {
+    "analysisId": 1,
+    "description": "SCCS, TAR = 0-2",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20210101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCCS",
+    "createSccsIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 0,
+          "startAnchor": "era start",
+          "end": 2,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 0,
+          "startAnchor": "era start",
+          "end": 2,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId",
+          "label": "Pre-exposure",
+          "stratifyById": true,
+          "start": -30,
+          "startAnchor": "era start",
+          "end": -1,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": false,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "calendarTimeCovariateSettings": {
+        "calendarTimeKnots": 5,
+        "allowRegularization": true,
+        "computeConfidenceIntervals": false,
+        "attr_class": "CalendarTimeCovariateSettings"
+      },
+      "minCasesForTimeCovariates": 10000,
+      "eventDependentObservation": false,
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "2": {
+    "analysisId": 2,
+    "description": "SCCS, TAR = 1-14",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20210101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCCS",
+    "createSccsIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 14,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 14,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId",
+          "label": "Pre-exposure",
+          "stratifyById": true,
+          "start": -30,
+          "startAnchor": "era start",
+          "end": -1,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": false,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "calendarTimeCovariateSettings": {
+        "calendarTimeKnots": 5,
+        "allowRegularization": true,
+        "computeConfidenceIntervals": false,
+        "attr_class": "CalendarTimeCovariateSettings"
+      },
+      "minCasesForTimeCovariates": 10000,
+      "eventDependentObservation": false,
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "3": {
+    "analysisId": 3,
+    "description": "SCCS, TAR = 1-28",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20210101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCCS",
+    "createSccsIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 28,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 28,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId",
+          "label": "Pre-exposure",
+          "stratifyById": true,
+          "start": -30,
+          "startAnchor": "era start",
+          "end": -1,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": false,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "calendarTimeCovariateSettings": {
+        "calendarTimeKnots": 5,
+        "allowRegularization": true,
+        "computeConfidenceIntervals": false,
+        "attr_class": "CalendarTimeCovariateSettings"
+      },
+      "minCasesForTimeCovariates": 10000,
+      "eventDependentObservation": false,
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "4": {
+    "analysisId": 4,
+    "description": "SCCS, TAR = 1-42",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20210101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCCS",
+    "createSccsIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 42,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 42,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId",
+          "label": "Pre-exposure",
+          "stratifyById": true,
+          "start": -30,
+          "startAnchor": "era start",
+          "end": -1,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": false,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "calendarTimeCovariateSettings": {
+        "calendarTimeKnots": 5,
+        "allowRegularization": true,
+        "computeConfidenceIntervals": false,
+        "attr_class": "CalendarTimeCovariateSettings"
+      },
+      "minCasesForTimeCovariates": 10000,
+      "eventDependentObservation": false,
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "5": {
+    "analysisId": 5,
+    "description": "SCCS, TAR = 1-90",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20210101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCCS",
+    "createSccsIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 90,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 90,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId",
+          "label": "Pre-exposure",
+          "stratifyById": true,
+          "start": -30,
+          "startAnchor": "era start",
+          "end": -1,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": false,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "calendarTimeCovariateSettings": {
+        "calendarTimeKnots": 5,
+        "allowRegularization": true,
+        "computeConfidenceIntervals": false,
+        "attr_class": "CalendarTimeCovariateSettings"
+      },
+      "minCasesForTimeCovariates": 10000,
+      "eventDependentObservation": false,
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "6": {
+    "analysisId": 6,
+    "description": "SCCS, TAR = 0-2, longer lookback",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20180101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCCS",
+    "createSccsIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 0,
+          "startAnchor": "era start",
+          "end": 2,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 0,
+          "startAnchor": "era start",
+          "end": 2,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId",
+          "label": "Pre-exposure",
+          "stratifyById": true,
+          "start": -30,
+          "startAnchor": "era start",
+          "end": -1,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": false,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "calendarTimeCovariateSettings": {
+        "calendarTimeKnots": 5,
+        "allowRegularization": true,
+        "computeConfidenceIntervals": false,
+        "attr_class": "CalendarTimeCovariateSettings"
+      },
+      "minCasesForTimeCovariates": 10000,
+      "eventDependentObservation": false,
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "7": {
+    "analysisId": 7,
+    "description": "SCCS, TAR = 1-14, longer lookback",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20180101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCCS",
+    "createSccsIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 14,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 14,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId",
+          "label": "Pre-exposure",
+          "stratifyById": true,
+          "start": -30,
+          "startAnchor": "era start",
+          "end": -1,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": false,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "calendarTimeCovariateSettings": {
+        "calendarTimeKnots": 5,
+        "allowRegularization": true,
+        "computeConfidenceIntervals": false,
+        "attr_class": "CalendarTimeCovariateSettings"
+      },
+      "minCasesForTimeCovariates": 10000,
+      "eventDependentObservation": false,
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "8": {
+    "analysisId": 8,
+    "description": "SCCS, TAR = 1-28, longer lookback",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20180101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCCS",
+    "createSccsIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 28,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 28,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId",
+          "label": "Pre-exposure",
+          "stratifyById": true,
+          "start": -30,
+          "startAnchor": "era start",
+          "end": -1,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": false,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "calendarTimeCovariateSettings": {
+        "calendarTimeKnots": 5,
+        "allowRegularization": true,
+        "computeConfidenceIntervals": false,
+        "attr_class": "CalendarTimeCovariateSettings"
+      },
+      "minCasesForTimeCovariates": 10000,
+      "eventDependentObservation": false,
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "9": {
+    "analysisId": 9,
+    "description": "SCCS, TAR = 1-42, longer lookback",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20180101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCCS",
+    "createSccsIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 42,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 42,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId",
+          "label": "Pre-exposure",
+          "stratifyById": true,
+          "start": -30,
+          "startAnchor": "era start",
+          "end": -1,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": false,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "calendarTimeCovariateSettings": {
+        "calendarTimeKnots": 5,
+        "allowRegularization": true,
+        "computeConfidenceIntervals": false,
+        "attr_class": "CalendarTimeCovariateSettings"
+      },
+      "minCasesForTimeCovariates": 10000,
+      "eventDependentObservation": false,
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "10": {
+    "analysisId": 10,
+    "description": "SCCS, TAR = 1-90, longer lookback",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20180101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCCS",
+    "createSccsIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 90,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 90,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId",
+          "label": "Pre-exposure",
+          "stratifyById": true,
+          "start": -30,
+          "startAnchor": "era start",
+          "end": -1,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": false,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "calendarTimeCovariateSettings": {
+        "calendarTimeKnots": 5,
+        "allowRegularization": true,
+        "computeConfidenceIntervals": false,
+        "attr_class": "CalendarTimeCovariateSettings"
+      },
+      "minCasesForTimeCovariates": 10000,
+      "eventDependentObservation": false,
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "11": {
+    "analysisId": 11,
+    "description": "SCCS, TAR = 0-2, post-exposure only",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20210101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCRI",
+    "createScriIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 0,
+          "startAnchor": "era start",
+          "end": 2,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 0,
+          "startAnchor": "era start",
+          "end": 2,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "controlIntervalSettings": {
+        "includeEraIds": "exposureId",
+        "label": "Control interval",
+        "stratifyById": false,
+        "start": 0,
+        "startAnchor": "era start",
+        "end": 999999,
+        "endAnchor": "era start",
+        "firstOccurrenceOnly": false,
+        "allowRegularization": false,
+        "profileLikelihood": false,
+        "isControlInterval": true,
+        "attr_class": "ControlIntervalSettings"
+      },
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "12": {
+    "analysisId": 12,
+    "description": "SCCS, TAR = 1-14, post-exposure only",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20210101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCRI",
+    "createScriIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 14,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 14,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "controlIntervalSettings": {
+        "includeEraIds": "exposureId",
+        "label": "Control interval",
+        "stratifyById": false,
+        "start": 0,
+        "startAnchor": "era start",
+        "end": 999999,
+        "endAnchor": "era start",
+        "firstOccurrenceOnly": false,
+        "allowRegularization": false,
+        "profileLikelihood": false,
+        "isControlInterval": true,
+        "attr_class": "ControlIntervalSettings"
+      },
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "13": {
+    "analysisId": 13,
+    "description": "SCCS, TAR = 1-28, post-exposure only",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20210101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCRI",
+    "createScriIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 28,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 28,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "controlIntervalSettings": {
+        "includeEraIds": "exposureId",
+        "label": "Control interval",
+        "stratifyById": false,
+        "start": 0,
+        "startAnchor": "era start",
+        "end": 999999,
+        "endAnchor": "era start",
+        "firstOccurrenceOnly": false,
+        "allowRegularization": false,
+        "profileLikelihood": false,
+        "isControlInterval": true,
+        "attr_class": "ControlIntervalSettings"
+      },
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "14": {
+    "analysisId": 14,
+    "description": "SCCS, TAR = 1-42, post-exposure only",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20210101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCRI",
+    "createScriIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 42,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 42,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "controlIntervalSettings": {
+        "includeEraIds": "exposureId",
+        "label": "Control interval",
+        "stratifyById": false,
+        "start": 0,
+        "startAnchor": "era start",
+        "end": 999999,
+        "endAnchor": "era start",
+        "firstOccurrenceOnly": false,
+        "allowRegularization": false,
+        "profileLikelihood": false,
+        "isControlInterval": true,
+        "attr_class": "ControlIntervalSettings"
+      },
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  },
+  "15": {
+    "analysisId": 15,
+    "description": "SCCS, TAR = 1-90, post-exposure only",
+    "getDbSccsDataArgs": {
+      "useCustomCovariates": false,
+      "useNestingCohort": false,
+      "deleteCovariatesSmallCount": 0,
+      "studyStartDate": "20210101",
+      "studyEndDate": "",
+      "maxCasesPerOutcome": 1000000,
+      "exposureIds": ["exposureId", "exposureId2"],
+      "customCovariateIds": "",
+      "attr_class": "args"
+    },
+    "createStudyPopulationArgs": {
+      "firstOutcomeOnly": true,
+      "naivePeriod": 365,
+      "attr_class": "args"
+    },
+    "design": "SCRI",
+    "createScriIntervalDataArgs": {
+      "eraCovariateSettings": [
+        {
+          "includeEraIds": "exposureId",
+          "label": "Main",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 90,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        },
+        {
+          "includeEraIds": "exposureId2",
+          "label": "Second",
+          "stratifyById": true,
+          "start": 1,
+          "startAnchor": "era start",
+          "end": 90,
+          "endAnchor": "era start",
+          "firstOccurrenceOnly": false,
+          "allowRegularization": false,
+          "profileLikelihood": true,
+          "isControlInterval": false,
+          "attr_class": "EraCovariateSettings"
+        }
+      ],
+      "controlIntervalSettings": {
+        "includeEraIds": "exposureId",
+        "label": "Control interval",
+        "stratifyById": false,
+        "start": 0,
+        "startAnchor": "era start",
+        "end": 999999,
+        "endAnchor": "era start",
+        "firstOccurrenceOnly": false,
+        "allowRegularization": false,
+        "profileLikelihood": false,
+        "isControlInterval": true,
+        "attr_class": "ControlIntervalSettings"
+      },
+      "attr_class": "args"
+    },
+    "fitSccsModelArgs": {
+      "prior": {
+        "priorType": "laplace",
+        "variance": 1,
+        "exclude": null,
+        "graph": null,
+        "neighborhood": null,
+        "useCrossValidation": true,
+        "forceIntercept": false,
+        "attr_class": "cyclopsPrior"
+      },
+      "control": {
+        "maxIterations": 1000,
+        "tolerance": 1e-06,
+        "convergenceType": "gradient",
+        "autoSearch": true,
+        "fold": 10,
+        "lowerLimit": 0.01,
+        "upperLimit": 20,
+        "gridSteps": 10,
+        "minCVData": 100,
+        "cvRepetitions": 1,
+        "noiseLevel": "quiet",
+        "threads": 1,
+        "seed": 1,
+        "resetCoefficients": true,
+        "startingVariance": 0.1,
+        "useKKTSwindle": false,
+        "tuneSwindle": 10,
+        "selectorType": "byPid",
+        "initialBound": 2,
+        "maxBoundCount": 5,
+        "algorithm": "ccd",
+        "attr_class": "cyclopsControl"
+      },
+      "profileBounds": [-2.3026, 2.3026],
+      "attr_class": "args"
+    },
+    "attr_class": "sccsAnalysis"
+  }
+}

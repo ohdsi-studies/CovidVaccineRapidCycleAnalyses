@@ -1,0 +1,47 @@
+Package: RcaCovidVaccine
+Type: Package
+Title: Safety Analysis for COVID-19 Vaccines
+Version: 0.0.1
+Authors@R: c(
+    person("Martijn", "Schuemie", email = "schuemie@ohdsi.org", role = c("aut", "cre")),
+    person("Patrick", "Ryan", role = c("aut"))
+  )
+Maintainer: Martijn J. Schuemie <schuemie@ohdsi.org>
+Description: Safety analysis for COVID-19 vaccines.
+Depends:
+  DatabaseConnector,
+  survival
+Imports:
+  SqlRender,
+  EmpiricalCalibration,
+  Cyclops,
+  CohortDiagnostics,
+  CohortMethod,
+  SelfControlledCaseSeries,
+  dplyr,
+  readr,
+  rlang,
+	ParallelLogger,
+	jsonlite,
+	plyr,
+	openxlsx,
+	EvidenceSynthesis,
+	meta
+Suggests:
+  CirceR,
+  DT,
+  ggiraph,
+  ggplot2,
+  htmltools,
+  lubridate,
+  pool,
+  purrr,
+  RColorBrewer,
+  rmarkdown,
+  scales,
+  shiny,
+  shinydashboard,
+  shinyWidgets,
+  zip
+License: Apache License 2.0
+RoxygenNote: 7.1.2

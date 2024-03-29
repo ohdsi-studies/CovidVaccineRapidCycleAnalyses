@@ -1,0 +1,62 @@
+atlasId,atlasName,cohortId,name
+1082,Persons with first COVID vaccine exposure to Janssen COVID-19 vaccine,1082,Janssen
+5373,Persons with first COVID vaccine exposure to Pfizer COVID-19 vaccine,5373,PfizerDose1
+5374,Persons with first COVID vaccine exposure to Moderna COVID-19 vaccine,5374,ModernaDose1
+5409,Persons with second COVID vaccine exposure to Pfizer COVID-19 vaccine,5409,PfizerDose2
+5410,Persons with second COVID vaccine exposure to Moderna COVID-19 vaccine,5410,ModernaDose2
+576,Acute Aseptic Arthritis,576,AcuteAsepticArthritis
+2796,Acute Hepatic Injury,2796,AcuteHepaticInjury
+622,Acute Kidney Injury,622,AcuteKidneyInjury
+3755,Acute Myocardial Infarction,3755,AcuteMyocardialInfarction
+345,Anaphylaxis,345,Anaphylaxis
+2763,Arrhythmia (Broad),2763,ArrhythmiaBroad
+2795,Arrhythmia (Narrow),2795,ArrhythmiaNarrow
+5767,Autoimmune hepatitis,5767,Autoimmunehepatitis
+2764,Autoimmune Thyroiditis,2764,AutoimmuneThyroiditis
+3073,Bell's Palsy,3073,BellsPalsy
+620,Cerebral Venous Thrombosis,620,CerebralVenousThrombosis
+5831,Cerebral Venous Thrombosis with thrombocytopenia,5831,CerebralVenousThrombosiswiththrombocytopenia
+5830,Cerebral Venous Thrombosis without thrombocytopenia,5830,CerebralVenousThrombosiswithoutthrombocytopenia
+3619,Composite: Coronary Artery Disease or Non-Hemorrhagic Stroke,3619,CompositeCoronaryArteryDiseaseOrNonHemorrhagicStroke
+1068,Composite: Deep Vein Thrombosis or Pulmonary Embolism,1068,CompositeDeepVeinThrombosisOrPulmonaryEmbolism
+5752,"Composite: DRESS, EM, SJS, TEN (SCAR)",5752,CompositeDRESSEMSJSTENSCAR
+3892,Composite: Hemorrhagic or Non-Hemorrhagic Stroke,3892,CompositeHemorrhagicOrNonHemorrhagicStroke
+1075,Composite: Myocarditis or Pericarditis,1075,CompositeMyocarditisOrPericarditis
+5832,Composite: Thrombosis with Thrombocytopenia (Venous or Arterial or Unspecified vessel type),5832,CompositeThrombosis
+3599,"Coronary Artery Disease, Including Acute Myocardial Infarction",3599,CoronaryArteryDiseaseIncludingAcuteMyocardialInfarction
+635,Deep Vein Thrombosis,635,DeepVeinThrombosis
+5827,Deep Vein Thrombosis with thrombocytopenia,5827,DeepVeinThrombosiswiththrombocytopenia
+5825,Deep Vein Thrombosis without thrombocytopenia,5825,DeepVeinThrombosiswithoutthrombocytopenia
+601,Disseminated Intravascular Coagulation,601,DisseminatedIntravascularCoagulation
+5520,Drug reaction with eosinophilia and systemic symptoms (DRESS) syndrome,5520,DRESSsyndrome
+3072,"Encephalitis, Including ADEM & Meningoencephalitis",3072,EncephalitisIncludingADEMMeningoencephalitis
+5760,Erythema multiforme,5760,Erythemamultiforme
+3074,Generalized Convulsion (Broad Seizure),3074,GeneralizedConvulsionBroadSeizure
+3075,Generalized Convulsion (Narrow Seizure),3075,GeneralizedConvulsionNarrowSeizure
+609,Guillain-Barre Syndrome,609,GuillainBarrSyndrome
+369,Heart Failure,369,HeartFailure
+3815,Hemorrhagic Stroke,3815,HemorrhagicStroke
+1077,Immune Thrombocytopenia or Hemolytic Uremic Syndrome,1077,ImmuneThrombocytopeniaOrHemolyticUremicSyndrome
+2823,Microangiopathy,2823,Microangiopathy
+5522,Minimal Change Disease Nephrotic Syndrome,5522,MinimalChangeDiseaseNephroticSyndrome
+3019,Multiple Sclerosis or Optic Neuritis,3019,MultipleSclerosisOrOpticNeuritis
+5754,Multisystem inflammatory syndrome (MIS),5754,Multisysteminflammatorysyndrome
+1079,Myocarditis,1079,Myocarditis
+627,Narcolepsy,627,Narcolepsy
+5639,Neuralgic Amyotrophy,5639,NeuralgicAmyotrophy
+3803,Non-Hemorrhagic Stroke,3803,NonHemorrhagicStroke
+1308,Pericarditis,1308,Pericarditis
+1148,Peripheral Arterial Thrombosis,1148,PeripheralArterialThrombosis
+624,Pulmonary Embolism,624,PulmonaryEmbolism
+5829,Pulmonary Embolism with thrombocytopenia,5829,PulmonaryEmbolismwiththrombocytopenia
+5828,Pulmonary Embolism without thrombocytopenia,5828,PulmonaryEmbolismwithoutthrombocytopenia
+2453,Sensorineural Hearing Loss,2453,SensorineuralHearingLoss
+5768,Small vessel vasculitis,5768,Smallvesselvasculitis
+5761,Stevens-Johnson syndrome (SJS) or Toxic Epidermal Necrolysis (TEN),5761,StevensJohnsonsyndromeOrToxicEpidermalNecrolysis
+366,Stress Cardiomyopathy,366,StressCardiomyopathy
+2927,Thrombocytopenia,2927,Thrombocytopenia
+1122,Thrombosis with Thrombocytopenia (Arterial),1122,ThrombosiswithThrombocytopeniaArterial
+1125,Thrombosis with Thrombocytopenia (Venous),1125,ThrombosiswithThrombocytopeniaVenous
+1126,Thrombosis with Thrombocytopenia (Vessel Type Unspecified),1126,ThrombosiswithThrombocytopeniaVesselTypeUnspecified
+610,Transverse Myelitis,610,TransverseMyelitis
+611,Type 1 Diabetes Mellitus,611,Type1DiabetesMellitus
